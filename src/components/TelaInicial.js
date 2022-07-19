@@ -11,7 +11,7 @@ export default function HomeScreen(props) {
             <div className="home">
                 <img src={logo} alt="logo"></img>
                 <h1>ZapRecall</h1>
-                <button onClick={() => setVisible(false)}>Iniciar Recall!</button>
+                <button /*onClick={() => setVisible(false)}*/>Iniciar Recall!</button>
             </div>
             /*:
             <FlashCardScreen counterQuestion={counterQuestion} setQuestionCounter={setQuestionCounter} statusResult={statusResult} setStatusResult={setStatusResult} restartGame={restartGame} /> */
