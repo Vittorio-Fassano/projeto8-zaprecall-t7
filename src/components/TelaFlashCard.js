@@ -7,7 +7,7 @@ export default function TelaFlashCard(props) {
 
     /*const { counterQuestion, setQuestionCounter, statusResult, setStatusResult, restartGame } = props;*/
 
-    const Perguntas = [
+    const perguntas = [
         { Pergunta: "O que é JSX?", Resposta: "Uma extensão de linguagem do JavaScript" },
         { Pergunta: "O React é __", Resposta: "uma biblioteca JavaScript para construção de interfaces" },
         { Pergunta: "Componentes devem iniciar com __ ", Resposta: "letra maiúscula" },
@@ -24,17 +24,13 @@ export default function TelaFlashCard(props) {
                 <h1>ZapRecall</h1>
             </header>
             <main className="Perguntas">
-                {Perguntas.sort(SortearCarta).map((elemento, index) => 
-                <Pergunta infos={elemento} /*increment={increment} addResult={addResult}*/ key={index + 1} />)}
+                {perguntas.map((elemento, index) => 
+                <Pergunta infos={elemento}/*increment={increment} addResult={addResult}*/ idx={index + 1} />)}
             </main>
             <footer>
                 teste   
             </footer>
         </div>
     );
-}
-
-function SortearCarta() {
-    return Math.random() - 0.5;
 }
 

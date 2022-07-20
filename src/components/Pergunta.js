@@ -3,7 +3,7 @@ import setinha from "../assets/setinha.png";
 
 export default function Pergunta(props) {
 
-    const { infos, /*increment, addResult,*/ key } = props;
+    const { infos, /*increment, addResult,*/ idx } = props;
 
     const [questionScreen, setQuestionScreen] = React.useState("questionScreen1");
     const [questionColor, setQuestionColor] = React.useState("");
@@ -11,7 +11,7 @@ export default function Pergunta(props) {
     if (questionScreen === "questionScreen1") {
         return (
             <div className={`Pergunta ${questionColor}`}>
-                <p>Pergunta {key}</p>
+                <p>Pergunta {idx}</p>
                 {questionColor === "" && <ion-icon name="play-outline" onClick={() => setQuestionScreen("questionScreen2")}></ion-icon>}
                 {questionColor === "green" && <ion-icon name="checkmark-circle"></ion-icon>}
                 {questionColor === "red" && <ion-icon name="close-circle"></ion-icon>}
@@ -21,9 +21,9 @@ export default function Pergunta(props) {
 
     } else if (questionScreen === "questionScreen2") {
         return (
-            <div className="questionText">
+            <div className="texto-pergunta">
                 <p>Pergunta {infos.Pergunta}</p>
-                <img className="arrow" src={setinha} alt="setinha" onClick={() => setQuestionScreen("questionScreen3")}></img>
+                <img className="seta-vira" src={setinha} alt="setinha" onClick={() => setQuestionScreen("questionScreen3")}></img>
             </div>
         );
 
