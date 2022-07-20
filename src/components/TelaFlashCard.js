@@ -5,7 +5,7 @@ import Pergunta from "./Pergunta";
 
 export default function TelaFlashCard(props) {
 
-   const { contadorPerguntas, setContadorPerguntas,  /*statusResult, setStatusResult, restartGame*/ } = props;
+   const { contadorPerguntas, setContadorPerguntas,  /*statusResult, setStatusResult,*/ restartGame } = props;
 
     const perguntas = [
         { Pergunta: "O que é JSX?", Resposta: "Uma extensão de linguagem do JavaScript" },
@@ -24,13 +24,18 @@ export default function TelaFlashCard(props) {
                 <h1>ZapRecall</h1>
             </header>
             <main className="Perguntas">
-                {perguntas.map((elemento, index) => 
+                {perguntas.sort(sorteio).map((elemento, index) => 
                 <Pergunta infos={elemento} contagem={contagem} /*addResult={addResult}*/ idx={index + 1} />)}
             </main>
             <footer>
                 {`${contadorPerguntas}/4`}
+                <button className="restart" onClick={restartGame}>REINICIAR RECALL</button>
             </footer>
         </div>
     );
+}
+
+function sorteio() {
+    return Math.random() - 0.5;
 }
 

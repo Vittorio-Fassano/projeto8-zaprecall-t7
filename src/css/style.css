@@ -114,6 +114,24 @@ body {
     left: 0;
 }
 
+.TelaFlashCard .restart {
+    width: 167px;
+    height: 32px;
+    background: #FB6B6B;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
 .Perguntas {
     margin-top: 30px;
     height: 100%;
@@ -196,7 +214,7 @@ body {
     cursor: pointer;
 }
 
-.questionAnswer {
+.respostas {
     margin-top: 25px;
     width: 299px;
     height: 131px;
@@ -210,7 +228,7 @@ body {
     align-items: center;
 }
 
-.questionAnswer p {
+.respostas p {
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 400;
@@ -218,7 +236,7 @@ body {
     line-height: 22px;
 }
 
-.questionAnswer .btns {
+.respostas .botoes {
     margin-top: 12px;
     display: flex;
     flex-direction: row;
@@ -226,7 +244,7 @@ body {
     justify-content: center;
 }
 
-.questionAnswer button {
+.respostas button {
     margin-left: 5px;
     width: 85.17px;
     height: 37.17px;
@@ -244,14 +262,14 @@ body {
     cursor: pointer;
 }
 
-.questionAnswer .red {
+.respostas .red {
     background: #FF3030;
 }
 
-.questionAnswer .orange {
+.respostas .orange {
     background: #FF922E;
 }
 
-.questionAnswer .green {
+.respostas .green {
     background: #2FBE34;
 }

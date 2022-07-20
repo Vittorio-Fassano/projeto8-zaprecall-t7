@@ -5,52 +5,52 @@ export default function Pergunta(props) {
 
     const { infos, contagem, /*addResult,*/ idx } = props;
 
-    const [questionScreen, setQuestionScreen] = React.useState("questionScreen1");
-    const [questionColor, setQuestionColor] = React.useState("");
+    const [telas, setTelas] = React.useState("tela1");
+    const [corPerguntas, setCorPerguntas] = React.useState("");
 
-    if (questionScreen === "questionScreen1") {
+    if (telas === "tela1") {
         return (
-            <div className={`Pergunta ${questionColor}`}>
+            <div className={`Pergunta ${corPerguntas}`}>
                 <p>Pergunta {idx}</p>
-                {questionColor === "" && <ion-icon name="play-outline" onClick={() => setQuestionScreen("questionScreen2")}></ion-icon>}
-                {questionColor === "green" && <ion-icon name="checkmark-circle"></ion-icon>}
-                {questionColor === "red" && <ion-icon name="close-circle"></ion-icon>}
-                {questionColor === "orange" && <ion-icon name="help-circle"></ion-icon>}
+                {corPerguntas === "" && <ion-icon name="play-outline" onClick={() => setTelas("tela2")}></ion-icon>}
+                {corPerguntas === "green" && <ion-icon name="checkmark-circle"></ion-icon>}
+                {corPerguntas === "red" && <ion-icon name="close-circle"></ion-icon>}
+                {corPerguntas === "orange" && <ion-icon name="help-circle"></ion-icon>}
             </div>
         );
 
-    } else if (questionScreen === "questionScreen2") {
+    } else if (telas === "tela2") {
         return (
             <div className="texto-pergunta">
                 <p>Pergunta {infos.Pergunta}</p>
-                <img className="seta-vira" src={setinha} alt="setinha" onClick={() => setQuestionScreen("questionScreen3")}></img>
+                <img className="seta-vira" src={setinha} alt="setinha" onClick={() => setTelas("tela3")}></img>
             </div>
         );
 
-    } else if (questionScreen === "questionScreen3") {
+    } else if (telas === "tela3") {
         return (
-            <div className="questionAnswer">
+            <div className="respostas">
                 <p>{infos.Resposta}</p>
-                <div className="btns">
+                <div className="botoes">
                     <button className="red" onClick={() => {
-                        setQuestionScreen("questionScreen1");
-                        setQuestionColor("red");
+                        setTelas("tela1");
+                        setCorPerguntas("red");
                         contagem();
                         /*addResult("red");*/
                     }
                     }>Não lembrei</button>
 
                     <button className="orange" onClick={() => {
-                        setQuestionScreen("questionScreen1");
-                        setQuestionColor("orange");
+                        setTelas("tela1");
+                        setCorPerguntas("orange");
                         contagem();;
                         /*addResult("orange");*/
                     }
                     }>Quase não lembrei</button>
 
                     <button className="green" onClick={() => {
-                        setQuestionScreen("questionScreen1");
-                        setQuestionColor("green");
+                        setTelas("tela1");
+                        setCorPerguntas("green");
                         contagem();
                         /*addResult("green");*/
                     }
