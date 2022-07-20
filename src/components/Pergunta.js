@@ -22,7 +22,7 @@ export default function Pergunta(props) {
     } else if (telas === "tela2") {
         return (
             <div className="texto-pergunta">
-                <p>Pergunta {infos.Pergunta}</p>
+                <p>{infos.Pergunta}</p>
                 <img className="seta-vira" src={setinha} alt="setinha" onClick={() => setTelas("tela3")}></img>
             </div>
         );

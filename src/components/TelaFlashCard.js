@@ -38,4 +38,3 @@ export default function TelaFlashCard(props) {
 function sorteio() {
     return Math.random() - 0.5;
 }
-
