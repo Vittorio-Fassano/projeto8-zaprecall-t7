@@ -10,7 +10,7 @@ export default function Pergunta(props) {
 
     if (questionScreen === "questionScreen1") {
         return (
-            <div className={`question ${questionColor}`}>
+            <div className={`Pergunta ${questionColor}`}>
                 <p>Pergunta {key}</p>
                 {questionColor === "" && <ion-icon name="play-outline" onClick={() => setQuestionScreen("questionScreen2")}></ion-icon>}
                 {questionColor === "green" && <ion-icon name="checkmark-circle"></ion-icon>}

@@ -5,6 +5,7 @@
 body {
     font-family: 'Recursive', sans-serif;
     font-family: 'Righteous', cursive;
+    background: #FB6B6B;
 }
 
 .home {
@@ -12,7 +13,6 @@ body {
     height: 100vh;
     background: #FB6B6B;
     border: 1px solid #DBDBDB;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,6 @@ body {
     width: 100%;
     height: 100%;
     background: #FB6B6B;
-    border: 1px solid #DBDBDB;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,10 +113,144 @@ body {
     left: 0;
 }
 
-.perguntas {
-    margin-bottom: 170px;
+.Perguntas {
+    margin-top: 30px;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 
+.Pergunta {
+    margin-top: 23px;
+    width: 300px;
+    height: 65px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Pergunta p {
+    margin-left: 15px;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.Pergunta.red {
+    color: #FF3030;
+    text-decoration: line-through #FF3030;
+}
+
+.Pergunta.orange {
+    color: #FF922E;
+    text-decoration: line-through #FF922E;
+}
+
+.Pergunta.green {
+    color: #2FBE34;
+    text-decoration: line-through #2FBE34;
+}
+
+.Pergunta ion-icon {
+    width: 20px;
+    height: 23px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.questionText {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 299px;
+    height: 131px;
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.questionText p {
+    display: flex;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 10px;
+    margin-top: 20px;
+    color: #333333;
+}
+
+.questionText .arrow {
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+.questionAnswer {
+    margin-top: 25px;
+    width: 299px;
+    height: 131px;
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.questionAnswer p {
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.questionAnswer .btns {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.questionAnswer button {
+    margin-left: 5px;
+    width: 85.17px;
+    height: 37.17px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.questionAnswer .red {
+    background: #FF3030;
+}
+
+.questionAnswer .orange {
+    background: #FF922E;
+}
+
+.questionAnswer .green {
+    background: #2FBE34;
+}

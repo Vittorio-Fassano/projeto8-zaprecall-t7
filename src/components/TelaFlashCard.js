@@ -23,7 +23,7 @@ export default function TelaFlashCard(props) {
                 <img src={logo_pequeno} alt="logo-pequeno"></img>
                 <h1>ZapRecall</h1>
             </header>
-            <main className="perguntas">
+            <main className="Perguntas">
                 {Perguntas.sort(SortearCarta).map((elemento, index) => 
                 <Pergunta infos={elemento} /*increment={increment} addResult={addResult}*/ key={index + 1} />)}
             </main>
