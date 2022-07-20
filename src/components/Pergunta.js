@@ -3,7 +3,7 @@ import setinha from "../assets/setinha.png";
 
 export default function Pergunta(props) {
 
-    const { infos, /*increment, addResult,*/ idx } = props;
+    const { infos, contagem, /*addResult,*/ idx } = props;
 
     const [questionScreen, setQuestionScreen] = React.useState("questionScreen1");
     const [questionColor, setQuestionColor] = React.useState("");
@@ -35,24 +35,24 @@ export default function Pergunta(props) {
                     <button className="red" onClick={() => {
                         setQuestionScreen("questionScreen1");
                         setQuestionColor("red");
-                        /*increment();
-                        addResult("red");*/
+                        contagem();
+                        /*addResult("red");*/
                     }
                     }>Não lembrei</button>
 
                     <button className="orange" onClick={() => {
                         setQuestionScreen("questionScreen1");
                         setQuestionColor("orange");
-                        /*increment();
-                        addResult("orange");*/
+                        contagem();;
+                        /*addResult("orange");*/
                     }
                     }>Quase não lembrei</button>
 
                     <button className="green" onClick={() => {
                         setQuestionScreen("questionScreen1");
                         setQuestionColor("green");
-                        /*increment();
-                        addResult("green");*/
+                        contagem();
+                        /*addResult("green");*/
                     }
                     }>Zap!</button>
 

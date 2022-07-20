@@ -9,8 +9,8 @@ import "../css/style.css";
 export default function App() {
     
     const [visible, setVisible] = React.useState(true);
-    /*const [counterQuestion, setQuestionCounter] = React.useState(0);
-    const [statusResult, setStatusResult] = React.useState([]);
+    const [contadorPerguntas, setContadorPerguntas] = React.useState(0);
+    /*const [statusResult, setStatusResult] = React.useState([]);
 
     function restartGame() {
         setVisible(true);
@@ -20,7 +20,7 @@ export default function App() {
 
     return (
         <>
-            <TelaInicial visible={visible} setVisible={setVisible}/>
+            <TelaInicial visible={visible} setVisible={setVisible} contadorPerguntas={contadorPerguntas} setContadorPerguntas={setContadorPerguntas}/>
         </>
     );
 }

@@ -5,7 +5,7 @@ import Pergunta from "./Pergunta";
 
 export default function TelaFlashCard(props) {
 
-    /*const { counterQuestion, setQuestionCounter, statusResult, setStatusResult, restartGame } = props;*/
+   const { contadorPerguntas, setContadorPerguntas,  /*statusResult, setStatusResult, restartGame*/ } = props;
 
     const perguntas = [
         { Pergunta: "O que é JSX?", Resposta: "Uma extensão de linguagem do JavaScript" },
@@ -14,8 +14,8 @@ export default function TelaFlashCard(props) {
         { Pergunta: "Podemos colocar __ dentro do JSX", Resposta: "expressões" },
     ];
 
-    /*const increment = () => { setQuestionCounter(counterQuestion + 1) };
-    const addResult = (result) => { setStatusResult([...statusResult, result]) };*/
+    const contagem = () => { setContadorPerguntas(contadorPerguntas + 1) };
+    /*const addResult = (result) => { setStatusResult([...statusResult, result]) };*/
 
     return (
         <div className="TelaFlashCard">
@@ -25,10 +25,10 @@ export default function TelaFlashCard(props) {
             </header>
             <main className="Perguntas">
                 {perguntas.map((elemento, index) => 
-                <Pergunta infos={elemento}/*increment={increment} addResult={addResult}*/ idx={index + 1} />)}
+                <Pergunta infos={elemento} contagem={contagem} /*addResult={addResult}*/ idx={index + 1} />)}
             </main>
             <footer>
-                teste   
+                {`${contadorPerguntas}/4`}
             </footer>
         </div>
     );
