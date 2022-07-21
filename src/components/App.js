@@ -5,7 +5,6 @@ import TelaInicial from "./TelaInicial";
 import "../css/reset.css";
 import "../css/style.css";
 
-
 export default function App() {
     
     const [visible, setVisible] = React.useState(true);

@@ -1,3 +1,5 @@
+/*ARRUMAR SCROLL DAS PERGUNTAS NA TELAFLASHCARD E O SCROLL NAS PERGUNTAS APÓS O RESULTADO*/
+
 * {
     box-sizing: border-box;
 }
@@ -71,7 +73,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin-top: 22px;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 .TelaFlashCard img {
@@ -119,7 +122,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 
 .Pergunta {
     margin-top: 23px;
@@ -328,16 +330,4 @@ body {
     cursor: pointer;
     margin-top: 13px;
     margin-bottom: 170px;
-}
-
-ion-icon .red {
-    color: #FF3030;
-}
-
-ion-icon .orange {
-    color: #FF922E;
-}
-
-ion-icon .green {
-    color: #2FBE34;
 }
