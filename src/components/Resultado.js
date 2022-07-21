@@ -20,7 +20,7 @@ export default function Resultado(props) {
 
             {finish && happyMessage && <p className="emojiText"><img className='emoji' src={party} alt="party" /><strong>Parabéns!</strong><br /><br />Você não esqueceu de <br /> nenhum flashcard!<br /><br /></p>}
             {finish && !happyMessage && <p className="emojiText"><img className='emoji' src={sad} alt="sad" /><strong>Putz...</strong><br /><br />Ainda faltam alguns... <br />Mas não desanime!<br /><br /></p>}
-
+            
             <p className="emojiText">
                 {contagem}/4 CONCLUÍDOS <br />
                 {status.map(element => {

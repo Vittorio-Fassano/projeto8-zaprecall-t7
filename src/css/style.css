@@ -95,25 +95,6 @@ body {
     color: #FFFFFF;
 }
 
-.TelaFlashCard footer {
-    height: 70px;
-    width: 100%;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    max-height: 400px;
-    background: #FFFFFF;
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-}
-
 .TelaFlashCard .restart {
     width: 167px;
     height: 28px;
@@ -275,6 +256,24 @@ body {
     background: #2FBE34;
 }
 
+.TelaFlashCard footer {
+    height: 80px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    max-height: 400px;
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
 
 .footer-resultado {
     display: flex;
@@ -284,16 +283,19 @@ body {
     text-align: center;
     margin-top: 25px;
     margin-bottom: 25px;
+    background-color: #ffffff;
 }
 
 .footer-resultado .emoji {
     width: 18px;
     height: 18px;
     margin-right: 10px;
+    background-color: #ffffff;
 }
 
 .footer-resultado p:first-child {
     margin-top: 14px;
+    background-color: #ffffff;
 }
 
 .footer-resultado .emojiText {
@@ -303,10 +305,9 @@ body {
     font-size: 18px;
     line-height: 22px;
     text-align: center;
-}
-
-.footer-resultado .emojiText {
     margin-bottom: 6px;
+    background-color: #ffffff;
+    width: 100vw;
 }
 
 .footer-resultado .restart {
@@ -325,6 +326,18 @@ body {
     color: #FFFFFF;
     border: none;
     cursor: pointer;
-    margin-top: 22px;
-    margin-bottom: 22px;
+    margin-top: 13px;
+    margin-bottom: 170px;
+}
+
+ion-icon .red {
+    color: #FF3030;
+}
+
+ion-icon .orange {
+    color: #FF922E;
+}
+
+ion-icon .green {
+    color: #2FBE34;
 }
