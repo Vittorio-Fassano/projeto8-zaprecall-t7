@@ -1,11 +1,11 @@
 import React from "react";
 import logo_pequeno from "../assets/logo-pequeno.png";
 import Pergunta from "./Pergunta";
-/*import Result from "./Result";*/
+import Resultado from "./Resultado";
 
 export default function TelaFlashCard(props) {
 
-   const { contadorPerguntas, setContadorPerguntas,  /*statusResult, setStatusResult,*/ restartGame } = props;
+   const { contadorPerguntas, setContadorPerguntas,  resultado, setResultado, restartGame } = props;
 
     const perguntas = [
         { Pergunta: "O que é JSX?", Resposta: "Uma extensão de linguagem do JavaScript" },
@@ -15,7 +15,7 @@ export default function TelaFlashCard(props) {
     ];
 
     const contagem = () => { setContadorPerguntas(contadorPerguntas + 1) };
-    /*const addResult = (result) => { setStatusResult([...statusResult, result]) };*/
+    const addResultado = (result) => { setResultado([...resultado, result]) };
 
     return (
         <div className="TelaFlashCard">
@@ -25,11 +25,10 @@ export default function TelaFlashCard(props) {
             </header>
             <main className="Perguntas">
                 {perguntas.sort(sorteio).map((elemento, index) => 
-                <Pergunta infos={elemento} contagem={contagem} /*addResult={addResult}*/ idx={index + 1} />)}
+                <Pergunta infos={elemento} contagem={contagem} addResultado={addResultado} idx={index + 1} />)}
             </main>
             <footer>
-                {`${contadorPerguntas}/4`}
-                <button className="restart" onClick={restartGame}>REINICIAR RECALL</button>
+                <Resultado contagem={contadorPerguntas} status={resultado} perguntas={perguntas.length} restartGame={restartGame} />
             </footer>
         </div>
     );

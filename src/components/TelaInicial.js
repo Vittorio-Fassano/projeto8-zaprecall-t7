@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 
 export default function TelaInicial(props) {
 
-    const { visible, setVisible, contadorPerguntas, setContadorPerguntas, /*statusResult, setStatusResult,*/ restartGame } = props;
+    const { visible, setVisible, contadorPerguntas, setContadorPerguntas, resultado, setResultado, restartGame } = props;
 
     return (
         visible === true 
@@ -15,6 +15,6 @@ export default function TelaInicial(props) {
                 <button onClick={() => setVisible(false)}>Iniciar Recall!</button>
             </div>
             :
-            <TelaFlashCard contadorPerguntas={contadorPerguntas} setContadorPerguntas={setContadorPerguntas} restartGame={restartGame} /*statusResult={statusResult} setStatusResult={setStatusResult}*/  /> 
+            <TelaFlashCard contadorPerguntas={contadorPerguntas} setContadorPerguntas={setContadorPerguntas} restartGame={restartGame} resultado={resultado} setResultado={setResultado}  /> 
     );
 }

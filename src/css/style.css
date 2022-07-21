@@ -274,3 +274,57 @@ body {
 .respostas .green {
     background: #2FBE34;
 }
+
+
+.footer-resultado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.footer-resultado .emoji {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.footer-resultado p:first-child {
+    margin-top: 14px;
+}
+
+.footer-resultado .emojiText {
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.footer-resultado .emojiText {
+    margin-bottom: 6px;
+}
+
+.footer-resultado .restart {
+    width: 167px;
+    height: 32px;
+    background: #FB6B6B;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}

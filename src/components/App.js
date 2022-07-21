@@ -10,17 +10,20 @@ export default function App() {
     
     const [visible, setVisible] = React.useState(true);
     const [contadorPerguntas, setContadorPerguntas] = React.useState(0);
-    /*const [statusResult, setStatusResult] = React.useState([]);*/
+    const [resultado, setResultado] = React.useState([]);
 
     function restartGame() {
         setVisible(true);
         setContadorPerguntas(0);
-        /*setStatusResult([]);*/
+        setResultado([]);
     }
 
     return (
         <>
-            <TelaInicial visible={visible} setVisible={setVisible} contadorPerguntas={contadorPerguntas} setContadorPerguntas={setContadorPerguntas} restartGame={restartGame}/>
+            <TelaInicial 
+            visible={visible} setVisible={setVisible} contadorPerguntas={contadorPerguntas} setContadorPerguntas={setContadorPerguntas}
+            resultado={resultado} setResultado={setResultado} restartGame={restartGame}
+            />
         </>
     );
 }

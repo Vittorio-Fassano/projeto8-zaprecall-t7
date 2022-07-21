@@ -3,7 +3,7 @@ import setinha from "../assets/setinha.png";
 
 export default function Pergunta(props) {
 
-    const { infos, contagem, /*addResult,*/ idx } = props;
+    const { infos, contagem, addResultado, idx } = props;
 
     const [telas, setTelas] = React.useState("tela1");
     const [corPerguntas, setCorPerguntas] = React.useState("");
@@ -36,7 +36,7 @@ export default function Pergunta(props) {
                         setTelas("tela1");
                         setCorPerguntas("red");
                         contagem();
-                        /*addResult("red");*/
+                        addResultado("red");
                     }
                     }>Não lembrei</button>
 
@@ -44,7 +44,7 @@ export default function Pergunta(props) {
                         setTelas("tela1");
                         setCorPerguntas("orange");
                         contagem();;
-                        /*addResult("orange");*/
+                        addResultado("orange");
                     }
                     }>Quase não lembrei</button>
 
@@ -52,7 +52,7 @@ export default function Pergunta(props) {
                         setTelas("tela1");
                         setCorPerguntas("green");
                         contagem();
-                        /*addResult("green");*/
+                        addResultado("green");
                     }
                     }>Zap!</button>
 
